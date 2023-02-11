@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <title>生徒の詳細画面</title>
+  <meta charset="utf-8">
+  <link href="/static/student_detail.css" rel="stylesheet">
+</head>
+<style>
+  a{
+    text-decoration: none;
+    color: #6877db;
+    font-size: 100%;
+  }
+a:hover{
+    color: #6877db;
+  }
+
+
+
+img{
+  width: 8%;
+  margin: auto;
+}
+
+img.img_student{
+  width: 100%;
+}
+
+img.graph { 
+  width:100%;
+  display: flex;
+
+}
+.homeicon{
+    display: flex;
+}
+
+
+.headline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	text-align: center;;
+  /* padding-bottom: 4%; */
+}
+
+.headline::before,
+.headline::after {
+	content: '';
+	width: 70px;
+	height: 3px;
+	background-color: #000000;
+}
+
+.headline::before {
+	margin-right: 20px;
+}
+.headline::after {
+	margin-left: 20px;
+}
+
+.content2{
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit{
+  font-size: 25px;
+}
+
+
+
+
+
+.st{
+  padding-left:5% ;
+  display: flex;
+  justify-content: center;
+}
+
+.content{
+  margin-top: 6%;
+}
+
+
+
+
+.dropdowns{
+  justify-content: center;
+  padding-left: 13%;
+}
+
+
+.detail{
+  padding-right: 25%;
+}
+
+h2{
+  /* font-size: 90%; */
+}
+
+.param{
+  padding-top: 10%;
+  /* font-size: large; */
+  font-weight: bold;
+}
+
+
+header{
+  margin-bottom: 100px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: #b9d9ff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  line-height: 100px;
+}
+h2{
+  /* padding-top: 9px; */
+  display: contents;
+}
+img{
+  /* width: 15px;
+  object-fit: contain; */
+}
+a{
+  margin: 0;
+  text-decoration: none;
+  color: #6877db;
+  /* line-height: 100px; */
+}
+.submit{
+  /* margin-top: 10px; */
+  font-size: 25px;
+  
+}
+.thumbnail{
+  /* padding-top: 10px; */
+  width: 100px;
+  
+}
+img{
+  padding-top: 22px;
+  width: 250px;
+  /* margin: auto; */
+
+}
+body{
+  color: #6877db;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 35px;
+  color: #6877db;
+  background-color: #b9d9ff;
+}
+header h2{
+  font-size: 30px;
+  /* padding: 10px 0 0; */
+}
+.subtitle_h2{
+  justify-content: center;
+  font-size: 34px;
+}
+.bn36,a .bn3637 .bn3637 a:hover{
+  border-color: #6877db;
+  color: #6877db;
+}
+.bn36{
+  width: 300px;
+  margin: 100px auto 50px;
+  border: 5px solid #b9d9ff;
+}
+.content{
+  width: 1296px;
+  border: 6px solid #b9d9ff;
+  border-radius: 50px;
+  margin: 137px auto;
+  padding: 145px 0;
+}
+form input{
+  border-color: red;
+}
+.container{
+  margin: 50px auto;
+}
+footer{
+  position: fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  text-align: center;
+  padding: 10px 0 1px;
+  font-weight:500;
+  background-color: #b9d9ff;
+}
+/* button{
+  color:#6877db;
+  border-color: azure;
+  background-color: #b9d9ff;
+} */
+</style>
+
+<body>
+  <header>
+    <a href="/home" class="thumbnail"><img src="/static/home_img/homeicon2.png" width="300"></a>
+    <h2>～ もっと楽に、効率よく。成績管理のスコアプラス ～</h2>
+    <p class="logout"><a href="/logout" class="submit">ログアウト</a></p>
+  </header>
+  <!-- <div class="content2">
+    <a onclick="history.back()" class="submit">戻る</a>
+    <a href="/logout" class="submit">ログアウト</a>
+  </div>
+  <div class="content">
+  <div class="headline">
+    <h2>学生詳細</h2>
+  </div> -->
+
+  <div class="student_detail">
+    <div class="st">
+      <div class="detail">
+      <img src="/static/student_images/user.png" alt="" title="" class="img_student"><br>
+        <div class="param">学籍番号:{{ params.student_id }}</div>
+        <div class="param">名前:{{ params.student_name }}</div>
+        <div class="param">学科:{{ params.department_name}}</div>
+        <div class="param">専攻:{{ params.major_name}}専攻</div>
+        <div class="param">クラス:{{ params.class_name}}</div>
+        <div class="param">年齢:{{ params.age }}歳</div>
+        <div class="param">性別:{{ params.gender }}</div>
+        <div class="param">今年度取得予定単位数:{{params.total_unit}}</div>
+      </div><!-- detail -->
+    
+    <div class="graphs">
+      <div class="dropdowns">
+        <div class="dropdown">
+         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            出席率のグラフを選択
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  
+          <li><a class="dropdown-item" href="/view_profile/{{ params.student_id }}/attendance_graph">出席率</a></li>
+        </ul>
+      </div>
+  
+      <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        {% if params.subject%}
+        {{params.subject }}を表示中
+        {% else %}
+        授業を選択
+        {% endif %}
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        {% if params.subject_list %}
+        {% for subject in params.subject_list %}
+        <li><a class="dropdown-item" href="/view_profile/{{ params.student_id }}/score_graph_{{subject}}">{{ subject }}</a></li>
+        {% endfor %}
+        {% else %}
+        <li><a class="dropdown-item" href="">採点したテスト
+        {% endif %}
+        </div>
+      </div>
+  
+      {% if params.image %}
+      <img src="/{{ params.image }}" class = "graph">
+      {% endif %}
+  </div><!-- student_detail -->
+</div>
+
+  <!-- <a href="/home" class="homeicon">
+    <img src="/static/home_img/home.png" alt="home">
+  </a> -->
+</div>
+<footer>
+  <p>&copy; 2023 Score++</p>
+</footer>
+</body>
+</html>

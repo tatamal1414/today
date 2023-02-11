@@ -1,0 +1,164 @@
+a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 100%;
+}
+a:hover{
+    color: #000000;
+}
+
+body{
+    font-size: large;
+}
+
+header{
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: #b9d9ff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  line-height: 100px;
+}
+h2{
+  /* padding-top: 9px; */
+  display: contents;
+  display: flex;
+  text-align: center;
+}
+img{
+  /* width: 15px;
+  object-fit: contain; */
+}
+a{
+  margin: 0;
+  text-decoration: none;
+  color: black;
+  /* line-height: 100px; */
+}
+.submit{
+  /* margin-top: 10px; */
+  font-size: 25px;
+  
+}
+.thumbnail{
+  /* padding-top: 10px; */
+  width: 100px;
+  
+}
+img{
+  padding-top: 22px;
+  width: 250px;
+  /* margin: auto; */
+
+}
+
+/* aタグ　ボタン */
+.bn3637 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    backface-visibility: hidden;
+    border: 0.2rem solid transparent;
+    border-radius: 3rem;
+    width: 123px;
+    margin: 0 auto;
+  }
+  
+  .bn36 {
+    border-color: #000000;
+    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+  }
+  
+  .bn36:hover {
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+  }
+
+
+
+
+  /* h1見出し */
+
+.headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    text-align: center;
+      font-size: 30px;
+  }
+  
+  .headline::before,
+  .headline::after {
+    content: '';
+    width: 70px;
+    height: 3px;
+    background-color: #000000;
+  }
+  
+  .headline::before {
+    margin-right: 20px;
+  }
+  .headline::after {
+    margin-left: 20px;
+  }
+  
+.container{
+  margin-top: 8%;
+}
+body{
+  color: #6877db;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 35px;
+  color: #6877db;
+  background-color: #b9d9ff;
+}
+header h2{
+  font-size: 30px;
+  /* padding: 10px 0 0; */
+}
+.subtitle_h2{
+  justify-content: center;
+  font-size: 34px;
+}
+.bn36,a .bn3637 .bn3637 a:hover{
+  border-color: #6877db;
+  color: #6877db;
+}
+.bn36{
+  width: 300px;
+  margin: 100px auto 50px;
+  border: 5px solid #b9d9ff;
+}
+.content{
+  width: 1296px;
+  border: 6px solid #b9d9ff;
+  border-radius: 50px;
+  margin: 137px auto;
+  padding: 145px 0;
+}
+form input{
+  border-color: red;
+}
+.container{
+  margin: 50px auto;
+}
+footer{
+  text-align: center;
+  padding: 10px 0 1px;
+  font-weight:500;
+  background-color: #b9d9ff;
+}
