@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+}
+/* ------------------------------------------------ */
+header{
+    background-color: #b9d9ff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    line-height: 100px;
+}
+h2{
+    /* padding-top: 9px; */
+    
+}
+img{
+    width: 150px;
+    object-fit: contain;
+}
+a{
+    text-decoration: none;
+    color: black;
+    /* line-height: 100px; */
+}
+.submit{
+    /* margin-top: 10px; */
+    
+}
+.thumbnail{
+    padding-top: 10px;
+}
+/* ---------------------------------------------------- */
+main{
+
+}
+.student_icon{
+    text-align: center;
+    padding-bottom: 5%;
+}
+.student_table{
+    /* align-items: center; */
+}
+table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 60%;
+    height: 40%;
+    
+}
+
+
+.grade{
+    /* display: inline-block; */
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.grade_num{
+    border-bottom: solid 3px cadetblue;
+    width: 20%;
+    text-align: center;
+
+}
+
+.management{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 5%;
+}
+
+.Attendance_management{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+.Attendance_management::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+  }
+.Attendance_management:hover::after {
+    transform: scale(1, 1);
+}
+.Grade_management{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+.Grade_management::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+  }
+.Grade_management:hover::after {
+    transform: scale(1, 1);
+}
+
+/* --------------------------------------------------- */
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #b9d9ff;
+}
